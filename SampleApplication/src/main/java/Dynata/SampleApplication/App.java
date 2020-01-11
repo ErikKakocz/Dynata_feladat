@@ -1,22 +1,14 @@
 package Dynata.SampleApplication;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URI;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-
-import javax.xml.stream.util.StreamReaderDelegate;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -25,7 +17,6 @@ import org.apache.log4j.Logger;
 
 import model.Status;
 import model.Participation;
-import model.PrintMode;
 import model.Member;
 import model.Survey;
 
@@ -39,8 +30,10 @@ public class App {
     private static Map<Long, ArrayList<Member>> membersEligibleForSurvey;
     private static Map<Long, ArrayList<Survey>> surveysByMember;
     private static Map<Long, ArrayList<Survey>> filteredSurveysByMember;
+    
     private static ArrayList<Member> membersList;
     private static ArrayList<Survey> surveysList;
+    
     private static final String PROMPTTEXT = "Please choose from the following options!\n1,Members who completed a specific survey."
             + "\n2,Surveys completed by a specific member.\n3,Points collected by a specific member."
             + "\n4,Members eligible for a specific survey.\n5,Statistics about all surveys.\n6,Exit,";
