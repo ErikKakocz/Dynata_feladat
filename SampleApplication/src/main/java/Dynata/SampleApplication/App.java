@@ -36,7 +36,7 @@ public class App {
     
     private static final String PROMPTTEXT = "Please choose from the following options!\n1,Members who completed a specific survey."
             + "\n2,Surveys completed by a specific member.\n3,Points collected by a specific member."
-            + "\n4,Members eligible for a specific survey.\n5,Statistics about all surveys.\n6,Exit,";
+            + "\n4,Members eligible for a specific survey.\n5,Exit,";
 
     private static final String POINTSCOLLECTEDTEXT = "%s collected %d points";
     private static final String SURVEYQUERY = "Enter the id of the survey to query!";
@@ -244,10 +244,6 @@ public class App {
         return result;
     }
 
-    public static void statistics() {
-        
-    }
-
     public static void main(String[] args) {
         initData();
         Scanner scanner = null;
@@ -287,9 +283,6 @@ public class App {
                     break;
                 }
                 case 5: {
-                    statistics();
-                }
-                case 6: {
                     exit = true;
                 }
 
